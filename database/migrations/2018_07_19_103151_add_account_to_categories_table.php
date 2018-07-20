@@ -14,7 +14,7 @@ class AddAccountToCategoriesTable extends Migration
     public function up()
     {
         Schema::table('categories', function (Blueprint $table) {
-            $table->integer('account_id')->unsigner();
+            $table->integer('account_id')->unsigned();
             $table->foreign('account_id')->reference('id')->on('accounts');
         });
     }
